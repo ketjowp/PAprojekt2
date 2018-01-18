@@ -35,13 +35,10 @@ public class PytaniaActivity extends AppCompatActivity {
         pytaniawbazie pytania = new pytaniawbazie();
         final bazadanych baza = new bazadanych(this);
         Cursor c =baza.wszystkie();
-        //k.moveToFirst();
-
+       
         if(c.getCount()==0) {
-            //if(c.getInt(0)!=zmienneglobalne.LICZBA_PYTAN-1) {
             baza.czyscbaze();
             pytania.kreacja(baza);
-            //}
         }
         else{
             c.moveToLast();
